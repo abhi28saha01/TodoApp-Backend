@@ -2,6 +2,7 @@ const Todo = require('../models/TodoModel');
 
 exports.editTodo = async(req,res) => {
     try{
+        //Fetch id from Parameter
         const {id} = req.params;
 
         //Updated Data

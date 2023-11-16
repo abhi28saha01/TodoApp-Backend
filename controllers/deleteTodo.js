@@ -2,8 +2,9 @@ const Todo = require('../models/TodoModel');
 
 exports.deleteTodo = async(req,res) => {
     try{
+        //Fetch id from Parameter
         const {id} = req.params;
-
+        //Delete from Database
         await Todo.findByIdAndDelete(id);
 
         res.status(200).json({
